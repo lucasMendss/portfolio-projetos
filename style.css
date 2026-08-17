@@ -16,7 +16,7 @@ header {
     background: linear-gradient(135deg, #5a5a5a 0%, #3a3a3a 100%);
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 20px 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -33,14 +33,34 @@ header h1 {
     animation: slideDown 0.8s ease-out;
 }
 
-header h4 {
+.academic-info-header {
     font-family: 'Poppins', sans-serif;
     font-size: 0.95rem;
     font-weight: 500;
-    margin: 15px 0 0 0;
+    margin: 5px 0 0 0;
     color: rgba(255, 255, 255, 0.9);
     animation: slideDown 0.8s ease-out 0.1s both;
     letter-spacing: 0.5px;
+}
+
+.certifications-header {
+    margin: 5px 0px 5px 0;
+}
+
+.certifications a{
+    width: fit-content;
+    height: fit-content;
+}
+
+.certification-img {
+    height: 6%;
+    width: 6%;
+    margin: 0px 5px 0px 5px;
+    border-radius: 5%;
+}
+
+main h1 {
+    color: white;
 }
 
 .contact-social {
@@ -48,7 +68,7 @@ header h4 {
 }
 
 .contact-social p {
-    margin: 10px 0 0 0;
+    margin: 5px 0 0 0;
     color: rgba(255, 255, 255, 0.95);
     font-size: 0.9rem;
 }

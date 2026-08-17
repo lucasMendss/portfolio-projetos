@@ -10,8 +10,8 @@
 <body>
 
     <header>
-        <h1>Projetos Relevantes</h1>
-        <h4>Lucas Mendes - Graduando em Análise e Desenvolvimento de Sistemas - Técnico em Informática</h4>
+        <h1>Lucas Mendes</h1>
+        <h4 class="academic-info-header">Graduando em Análise e Desenvolvimento de Sistemas - Técnico em Informática</h4>
         <div class="contact-social">
             <p>
                 <strong>Contato:</strong> <a href="mailto:lucasmendes8ti@gmail.com">lucasmendes8ti@gmail.com</a> |
@@ -20,10 +20,29 @@
                 <a href="https://github.com/lucasMendss" target="_blank">Github</a>
             </p>
         </div>
+        <hr>
+        <h4 class="certifications-header">Certificações</h4>
+        <div class="certifications"> 
+            <a href="https://www.credly.com/badges/d1869793-081d-416d-b482-afd5a32118d3/linked_in_profile">
+                <img src="assets/certifications/craft-precise-prompts-for-ai-models.png" aria-label="Engenharia de Prompt (IBM)" class="certification-img" alt="">
+            </a>
+
+            <a href="https://coddy.tech/certifications/beSjAp-java-LqwkcT">
+                <img src="assets/certifications/coddy.png" class="certification-img" aria-label="Java Lógico e Fluxo de Controle (Coddy)" alt="">
+            </a>
+
+            <a href="https://coddy.tech/certifications/beSjAp-java-jx1zAL">
+                <img src="assets/certifications/coddy.png" class="certification-img" aria-label="Fundamentos do Java (Coddy)" alt="">
+            </a>
+
+            <a href="https://www.coursera.org/account/accomplishments/verify/CB19MQ3LY2H7">
+                <img src="assets/certifications/google_logo.jpg" class="certification-img" aria-label="Fundamentos do Suporte de TI (Google)" alt="">
+            </a>
+        </div>
     </header>
 
     <main>
-
+        <h1>Projetos</h1>
         <div class="project">
             <h2>API Rest de Produtos (2026)</h2>
             <ul>
@@ -43,10 +62,9 @@
         <div class="project">
             <h2>SnapClima (2026)</h2>
             <ul>
-                <li>Página web que exibe informações sobre o tempo de uma cidade informada pelo usuário. Acessa uma API
+                <li>Página web que exibe informações sobre o tempo de um local informado pelo usuário. Acessa uma API
                     pública de tempo e clima da OpenWeatherMap.</li>
-                <li>Hospedada na Vercel, estruturada com HTML, estilizada com CSS e com lógica implementada com
-                    Javascript.</li>
+                <li>HTML, CSS, Javascript e Vercel para a página, Java e Azure para a função sem servidor</li>
                 <li>Repositório e documentação:
                     <a href="https://github.com/lucasMendss/Snapclima">https://github.com/lucasMendss/Snapclima</a>
                 </li>
@@ -89,6 +107,35 @@
 
     </main>
 
-</body>
+        <script>
+          (function(){
+            const sidebar = document.getElementById('certSidebar');
+            const toggle = document.getElementById('certToggle');
+            function update(){
+              const closed = sidebar.classList.contains('closed');
+              sidebar.setAttribute('aria-hidden', closed ? 'true' : 'false');
+              toggle.setAttribute('aria-label', closed ? 'Abrir certificações' : 'Fechar certificações');
+              toggle.innerHTML = closed ? '\u2630' : '\u00D7';
+            }
+            toggle.addEventListener('click', function(e){
+              e.stopPropagation();
+              sidebar.classList.toggle('closed');
+              update();
+            });
+            // fechar ao clicar fora (opcional)
+            document.addEventListener('click', function(e){
+              if(!sidebar.classList.contains('closed')){
+                const isClickInside = sidebar.contains(e.target);
+                if(!isClickInside){
+                  sidebar.classList.add('closed');
+                  update();
+                }
+              }
+            });
+            update();
+          })();
+        </script>
+
+    </body>
 
 </html>
