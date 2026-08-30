@@ -43,24 +43,9 @@
 
     <main>
         <h1>Projetos</h1>
-        <div class="project">
-            <h2>API Rest de Produtos (2026)</h2>
-            <ul>
-                <li>API REST com funcionalidades de criação, listagem, atualização e exclusão de produtos.</li>
-                <li>Feita com Java e Spring Boot para estudo de conceitos essenciais como controllers, services,
-                    tratamento global de exceções, DTOs e documentação automática com Swagger/OpenAPI.
-                    Trabalha com uma lista de produtos em memória, permitindo operações de CRUD sem banco de dados.
-                </li>
-                <li>
-                    Repositório no Github:
-                    <a href="https://github.com/lucasMendss/first-spring-web-rest-api"
-                        target="_blank">https://github.com/lucasMendss/first-spring-web-rest-api</a>
-                </li>
-            </ul>
-        </div>
 
         <div class="project">
-            <h2>SnapClima (2026)</h2>
+            <h2>SnapClima</h2>
             <ul>
                 <li>Página web que exibe informações sobre o tempo de um local informado pelo usuário. Acessa uma API
                     pública de tempo e clima da OpenWeatherMap.</li>
@@ -76,13 +61,43 @@
         </div>
 
         <div class="project">
-            <h2>Gerenciador de Aluno (2026)</h2>
+            <h2>API Rest de Produtos</h2>
+            <ul>
+                <li>API REST com funcionalidades de criação, listagem, atualização e exclusão de produtos.</li>
+                <li>Feita com Java e Spring Boot para estudo de conceitos essenciais como controllers, services,
+                    tratamento global de exceções, DTOs e documentação automática com Swagger/OpenAPI.
+                    Trabalha com uma lista de produtos em memória, permitindo operações de CRUD sem banco de dados.
+                </li>
+                <li>
+                    Repositório e documentação:
+                    <a href="https://github.com/lucasMendss/first-spring-web-rest-api"
+                        target="_blank">https://github.com/lucasMendss/first-spring-web-rest-api</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h2>Bot de Figurinhas para Whatsapp</h2>
+            <ul>
+                <li>Bot que transforma em figurinha qualquer imagem ou GIF enviada no Whatsapp com legenda '!sticker'.</li>
+                <li>Desenvolvido com Node.js. Diante da dificuldade em encontrar bots gratuitos sem limite, decidi criar
+                    o meu.</li>
+                <li>
+                    Repositório e documentação:
+                    <a href="https://github.com/lucasMendss/bot-figurinha-whatsapp"
+                        target="_blank">https://github.com/lucasMendss/bot-figurinha-whatsapp</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h2>Gerenciador de Aluno</h2>
             <ul>
                 <li>App desktop para criar, atualizar, pesquisar e deletar cadastros de alunos.</li>
                 <li>Desenvolvido em C# com Windows Forms Application. Utiliza um banco de dados PostgreSQL hospedado na
                     Supabase.</li>
                 <li>
-                    Repositório no Github:
+                    Repositório e documentação
                     <a href="https://github.com/lucasMendss/gerenciador-de-aluno-windows-desktop" target="_blank">
                         github.com/lucasMendss/gerenciador-de-aluno-windows-desktop
                     </a>
@@ -91,13 +106,13 @@
         </div>
 
         <div class="project">
-            <h2>Gerenciador de Frota (2025)</h2>
+            <h2>Gerenciador de Frota</h2>
             <ul>
                 <li>Aplicação web com login de administrador para gerenciar veículos de uma frota. Permite listar,
                     filtrar, cadastrar, atualizar e deletar registros.</li>
                 <li>Desenvolvido com Vue.js, JavaScript (API RESTful) e SQLite.</li>
                 <li>
-                    Repositório no Github:
+                    Repositório e documentação
                     <a href="https://github.com/lucasMendss/gerenciador-de-frota" target="_blank">
                         github.com/lucasMendss/gerenciador-de-frota
                     </a>
@@ -106,35 +121,6 @@
         </div>
 
     </main>
-
-        <script>
-          (function(){
-            const sidebar = document.getElementById('certSidebar');
-            const toggle = document.getElementById('certToggle');
-            function update(){
-              const closed = sidebar.classList.contains('closed');
-              sidebar.setAttribute('aria-hidden', closed ? 'true' : 'false');
-              toggle.setAttribute('aria-label', closed ? 'Abrir certificações' : 'Fechar certificações');
-              toggle.innerHTML = closed ? '\u2630' : '\u00D7';
-            }
-            toggle.addEventListener('click', function(e){
-              e.stopPropagation();
-              sidebar.classList.toggle('closed');
-              update();
-            });
-            // fechar ao clicar fora (opcional)
-            document.addEventListener('click', function(e){
-              if(!sidebar.classList.contains('closed')){
-                const isClickInside = sidebar.contains(e.target);
-                if(!isClickInside){
-                  sidebar.classList.add('closed');
-                  update();
-                }
-              }
-            });
-            update();
-          })();
-        </script>
 
     </body>
 
